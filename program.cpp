@@ -70,8 +70,21 @@ int main ()
             cout << endl;
         }
     int redak;
+    cout << "Unesite redak koji zelite igrati: ";
     cin >> redak;
-    }
+    int stupac;
+    cout << "Unesite stupac koji zelite igrati: ";
+    cin >> stupac;
 
+    if(polje2d[redak][stupac] == -1)
+    {
+        cout << "GAME OVER!!" << endl;
+        break;
+    }
+    else
+    {
+        polje2d [redak][stupac] = 1;
+    }
+    }
 }
 
