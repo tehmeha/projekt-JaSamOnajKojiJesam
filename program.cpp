@@ -36,7 +36,8 @@ int main ()
 
         cout << endl;
     }
-
+    int redak = 0;
+    int stupac = 0;
     while(1)
     {
         cout << endl;
@@ -61,6 +62,10 @@ int main ()
                 {
                     cout << polje_br_mina[i][j] << "   ";
                 }
+                else if(polje2d[i][j] == -1 && redak == i && stupac == j)
+                {
+                    cout << "+" << "   ";
+                }
                 else
                 {
                     cout << "-" << "   ";
@@ -69,22 +74,19 @@ int main ()
             }
             cout << endl;
         }
-    int redak;
+        if(polje2d[redak][stupac] == -1)
+        {
+            cout << "GAME OVER!!" << endl;
+            break;
+        }
+        else
+        {
+            polje2d [redak][stupac] = 1;
+        }
     cout << "Unesite redak koji zelite igrati: ";
     cin >> redak;
-    int stupac;
     cout << "Unesite stupac koji zelite igrati: ";
     cin >> stupac;
-
-    if(polje2d[redak][stupac] == -1)
-    {
-        cout << "GAME OVER!!" << endl;
-        break;
-    }
-    else
-    {
-        polje2d [redak][stupac] = 1;
-    }
     }
 }
 
