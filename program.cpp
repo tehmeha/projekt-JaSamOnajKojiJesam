@@ -79,14 +79,14 @@ int main ()
             cout << "GAME OVER!!" << endl;
             break;
         }
-        else
+        cout << "Unesite redak koji zelite igrati: ";
+        cin >> redak;
+        cout << "Unesite stupac koji zelite igrati: ";
+        cin >> stupac;
+        if( polje2d[redak][stupac] != -1 )
         {
             polje2d [redak][stupac] = 1;
         }
-    cout << "Unesite redak koji zelite igrati: ";
-    cin >> redak;
-    cout << "Unesite stupac koji zelite igrati: ";
-    cin >> stupac;
     }
 }
 
